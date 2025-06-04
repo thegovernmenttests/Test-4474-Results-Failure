@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Climate of Greenland - Wikipedia</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <meta charset="UTF-8" />
+  <title>Roblox</title>
   <style>
     body {
+      margin: 0;
+      background: #000;
+      color: #fff;
       font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      color: #000;
     }
 
-    #secret-log {
-      display: none;
-      background: #111;
-      color: #0f0;
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+    }
+
+    #code-area {
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px lime;
-      white-space: pre-line;
-      margin-top: 30px;
-    }
-
-    #code-entry {
-      margin-top: 80px;
-      border-top: 1px solid #ccc;
-      padding-top: 40px;
+      background: #111;
+      text-align: center;
     }
 
     input[type="text"] {
+      padding: 10px;
       width: 300px;
       font-size: 1rem;
     }
 
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    #secret-log {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #222;
+      color: #0f0;
+      border: 1px solid lime;
+      white-space: pre-wrap;
+    }
+
     img.secret-img {
-      width: 100%;
-      max-width: 500px;
-      margin-top: 15px;
+      margin-top: 10px;
+      max-width: 100%;
+      height: auto;
     }
   </style>
 </head>
 <body>
 
-  <h1>Climate of Greenland</h1>
-  <p>
-    The climate of Greenland is tundra. Because of its physical geography and high latitude, Greenland’s
-    weather is severely cold and dominated by Arctic air for most of the year...
-  </p>
+  <!-- Actual Roblox page inside a frame -->
+  <iframe src="https://www.roblox.com"></iframe>
 
-  <h2>Overview</h2>
-  <p>
-    Greenland's climate has changed significantly over the past decades, drawing attention from researchers
-    worldwide. Various observations are publicly available...
-  </p>
-
-  <ul>
-    <li>Temperature Reports (1980–2024)</li>
-    <li>Glacial Melting Statistics</li>
-    <li>Polar Wind Currents Studies</li>
-  </ul>
-
-  <!-- Secret Code Entry -->
-  <div id="code-entry">
-    <h3>Administrative Section</h3>
-    <p>Enter code to access restricted logs:</p>
+  <!-- Secret code input at the bottom -->
+  <div id="code-area">
+    <h3>Enter Access Code</h3>
     <input type="text" id="codeInput" placeholder="Enter code..." />
     <button onclick="checkCode()">Submit</button>
 
     <div id="secret-log">
-      <h2>ACCESS GRANTED — ENTITY 4474 LOG</h2>
-      <p><strong>Name:</strong> Ghastr (formerly "Billy")</p>
-      <p><strong>Status:</strong> UNSTABLE</p>
-      <p><strong>Trigger Code:</strong> <code>mrspecial2014</code></p>
+      <h2>ENTITY 4474 — Ghastr File</h2>
+      <p><strong>Status:</strong> ANOMALOUS — Containment Failed</p>
+      <p><strong>Code:</strong> mrspecial2014</p>
       <p>
-        > Last detected in Greenland, June 2025.<br>
-        > Subject exhibits reality-bending anomalies and auditory interference.<br>
-        > Eyewitnesses describe hearing static whispers resembling Morse code.
+        Subject was formerly identified as “Billy.”<br>
+        Reality interference detected June 2025.<br>
+        Phase shift into digital environments confirmed.
       </p>
-      <img src="https://postimg.cc/G8q0Mr09" class="secret-img" alt="Visual Capture">
+      <img src="https://postimg.cc/G8q0Mr09" class="secret-img" alt="Captured Frame">
     </div>
   </div>
 
   <script>
     function checkCode() {
-      const input = document.getElementById('codeInput').value.trim().toLowerCase();
-      if (input === 'mrspecial2014') {
+      const code = document.getElementById('codeInput').value.trim().toLowerCase();
+      if (code === 'mrspecial2014') {
         document.getElementById('secret-log').style.display = 'block';
       } else {
-        alert('Access Denied');
+        alert('Invalid code. Access denied.');
       }
     }
   </script>
