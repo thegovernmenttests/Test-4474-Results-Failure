@@ -1,63 +1,84 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ENTITY 4474 ACCESS</title>
+  <meta charset="UTF-8" />
+  <title>Environmental Data Record — Public Archive</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      background: black;
-      color: #00fff7;
-      font-family: 'Orbitron', monospace;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background-image: url('https://postimg.cc/G8q0Mr09');
-      background-size: cover;
-      background-position: center;
+      font-family: system-ui, sans-serif;
     }
-    .terminal {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 2rem;
-      border: 2px solid #00fff7;
-      border-radius: 15px;
-      box-shadow: 0 0 20px #00fff7, inset 0 0 30px #00fff7;
-      text-align: center;
-      max-width: 600px;
+    #secret-log {
+      display: none;
+      background: #111;
+      color: #0f0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px lime;
+      white-space: pre-line;
+      margin-top: 30px;
     }
-    h1 {
-      font-size: 2.5rem;
-      text-shadow: 0 0 15px #00fff7;
-      margin-bottom: 1rem;
+    #code-entry {
+      margin-top: 80px;
+      border-top: 1px solid #ccc;
+      padding-top: 40px;
     }
-    p {
-      font-size: 1.1rem;
-      color: #00fff7b3;
-      text-shadow: 0 0 5px #00fff7;
-    }
-    .redacted {
-      color: red;
-      font-weight: bold;
-      text-shadow: 0 0 10px red;
+    input[type="text"] {
+      width: 300px;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="terminal">
-    <h1>ENTITY <span class="redacted">4474</span> - LOG ENTRY</h1>
-    <p>
-      Welcome back, operative.<br><br>
-      The subject once known as <span class="redacted">Billy</span> has been removed.<br>
-      Replacement subject ID: <strong>ENTITY 4474</strong> (Codename: "Ghastr")<br><br>
-      Stay tuned to transmissions. Only the <span class="redacted">chosen</span> will know the truth.<br>
-      <em>"He watches. He waits. He knows."</em>
-    </p>
+
+  <h1>Environmental Data Record: E-12 Sector</h1>
+  <p>
+    The Environmental Data Records for Sector E-12 are archived below for public access. This dataset includes
+    various climate reports, environmental impact logs, and general observations from authorized researchers.
+  </p>
+  <h2>Overview</h2>
+  <p>
+    Sector E-12, a remote quadrant within the western valley, has shown notable environmental shifts over
+    the past few decades. The records listed below include general observations. If you're looking for the
+    restricted dataset, please contact the administrator.
+  </p>
+  <ul>
+    <li>Air Quality Reports (2003–2022)</li>
+    <li>Water Samples and Chemical Traces</li>
+    <li>Fauna Displacement Logs</li>
+  </ul>
+
+  <!-- Hidden ARG Section -->
+  <div id="code-entry">
+    <h3>Administrator Access</h3>
+    <p>Enter clearance code to view detailed logs:</p>
+    <input type="text" id="codeInput" placeholder="Access code..." />
+    <button onclick="checkCode()">Submit</button>
+
+    <div id="secret-log">
+      <h2>Access Granted: Log Entry 4474</h2>
+      <p><strong>Subject:</strong> ENTITY 4474 (“Ghastr”)</p>
+      <p><strong>Status:</strong> ACTIVE — UNCONTAINED</p>
+      <p><strong>Last Observed:</strong> [REDACTED LOCATION]</p>
+      <p>
+        > "mrspecial2014" confirmed as trigger phrase.<br>
+        > Web traces intercepted.<br>
+        > Subjects experiencing hallucinations or glitches in visual input following exposure.<br><br>
+        WARNING: Do not proceed unless you are authorized by Test Command Unit-3.
+      </p>
+      <img src="https://postimg.cc/G8q0Mr09" alt="Visual Evidence" style="width:100%; max-width:500px; margin-top:10px;" />
+    </div>
   </div>
+
+  <script>
+    function checkCode() {
+      const input = document.getElementById('codeInput').value.trim().toLowerCase();
+      if (input === 'mrspecial2014') {
+        document.getElementById('secret-log').style.display = 'block';
+      } else {
+        alert('Access Denied');
+      }
+    }
+  </script>
 </body>
 </html>
