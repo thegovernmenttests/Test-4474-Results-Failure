@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Environmental Data Record — Public Archive</title>
+  <meta charset="UTF-8">
+  <title>Climate of Greenland - Wikipedia</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   <style>
     body {
-      font-family: system-ui, sans-serif;
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      color: #000;
     }
+
     #secret-log {
       display: none;
       background: #111;
@@ -18,55 +23,63 @@
       white-space: pre-line;
       margin-top: 30px;
     }
+
     #code-entry {
       margin-top: 80px;
       border-top: 1px solid #ccc;
       padding-top: 40px;
     }
+
     input[type="text"] {
       width: 300px;
       font-size: 1rem;
+    }
+
+    img.secret-img {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Environmental Data Record: E-12 Sector</h1>
+  <h1>Climate of Greenland</h1>
   <p>
-    The Environmental Data Records for Sector E-12 are archived below for public access. This dataset includes
-    various climate reports, environmental impact logs, and general observations from authorized researchers.
+    The climate of Greenland is tundra. Because of its physical geography and high latitude, Greenland’s
+    weather is severely cold and dominated by Arctic air for most of the year...
   </p>
+
   <h2>Overview</h2>
   <p>
-    Sector E-12, a remote quadrant within the western valley, has shown notable environmental shifts over
-    the past few decades. The records listed below include general observations. If you're looking for the
-    restricted dataset, please contact the administrator.
+    Greenland's climate has changed significantly over the past decades, drawing attention from researchers
+    worldwide. Various observations are publicly available...
   </p>
+
   <ul>
-    <li>Air Quality Reports (2003–2022)</li>
-    <li>Water Samples and Chemical Traces</li>
-    <li>Fauna Displacement Logs</li>
+    <li>Temperature Reports (1980–2024)</li>
+    <li>Glacial Melting Statistics</li>
+    <li>Polar Wind Currents Studies</li>
   </ul>
 
-  <!-- Hidden ARG Section -->
+  <!-- Secret Code Entry -->
   <div id="code-entry">
-    <h3>Administrator Access</h3>
-    <p>Enter clearance code to view detailed logs:</p>
-    <input type="text" id="codeInput" placeholder="Access code..." />
+    <h3>Administrative Section</h3>
+    <p>Enter code to access restricted logs:</p>
+    <input type="text" id="codeInput" placeholder="Enter code..." />
     <button onclick="checkCode()">Submit</button>
 
     <div id="secret-log">
-      <h2>Access Granted: Log Entry 4474</h2>
-      <p><strong>Subject:</strong> ENTITY 4474 (“Ghastr”)</p>
-      <p><strong>Status:</strong> ACTIVE — UNCONTAINED</p>
-      <p><strong>Last Observed:</strong> [REDACTED LOCATION]</p>
+      <h2>ACCESS GRANTED — ENTITY 4474 LOG</h2>
+      <p><strong>Name:</strong> Ghastr (formerly "Billy")</p>
+      <p><strong>Status:</strong> UNSTABLE</p>
+      <p><strong>Trigger Code:</strong> <code>mrspecial2014</code></p>
       <p>
-        > "mrspecial2014" confirmed as trigger phrase.<br>
-        > Web traces intercepted.<br>
-        > Subjects experiencing hallucinations or glitches in visual input following exposure.<br><br>
-        WARNING: Do not proceed unless you are authorized by Test Command Unit-3.
+        > Last detected in Greenland, June 2025.<br>
+        > Subject exhibits reality-bending anomalies and auditory interference.<br>
+        > Eyewitnesses describe hearing static whispers resembling Morse code.
       </p>
-      <img src="https://postimg.cc/G8q0Mr09" alt="Visual Evidence" style="width:100%; max-width:500px; margin-top:10px;" />
+      <img src="https://postimg.cc/G8q0Mr09" class="secret-img" alt="Visual Capture">
     </div>
   </div>
 
